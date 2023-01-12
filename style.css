@@ -1,0 +1,35 @@
+.btn{
+    box-align: center;
+    background-color: pink;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    text-decoration: none;
+    color: black;
+    position: relative;
+    overflow: auto;
+}
+
+.btn span{
+    position:relative;
+    z-index: 1;
+}
+
+.btn::before{
+    content:"" ;
+    height: 0px;
+    position: absolute;
+    background-color: orangered;
+    width: 0px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+    overflow: hidden;
+}
+
+.btn:hover::before{
+    width: 200px;
+    height: 100px;
+}
